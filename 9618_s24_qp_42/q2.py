@@ -37,12 +37,11 @@ class TreeClass:
 
     def InsertNode(self, NewNode):
         if self.__NumberNodes == 0:
-            self.__Tree[0] = NewNode
+            self.__Tree[self.__NumberNodes] = NewNode
             self.__FirstNode = 0
             self.__NumberNodes += 1
         else:
             self.__Tree[self.__NumberNodes] = NewNode
-
             NodeAccess = self.__FirstNode
             direction = ""
             while NodeAccess != -1:

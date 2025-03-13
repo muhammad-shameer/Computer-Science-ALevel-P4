@@ -61,13 +61,11 @@ class Helicopter(Vehicle):
         if self.__VerticalPosition > self.__MaxHeight:
             self.__VerticalPosition = self.__MaxHeight
 
-        # self.__CurrentSpeed += self.__IncreaseAmount
         Vehicle.SetCurrentSpeed(self, Vehicle.GetCurrentSpeed(self) + Vehicle.GetIncreaseAmount(self))
 
         if Vehicle.GetCurrentSpeed(self) > Vehicle.GetMaxSpeed(self):
             Vehicle.SetCurrentSpeed(self, Vehicle.GetMaxSpeed(self))
 
-        # self.__HorizontalPosition += self.__CurrentSpeed
         Vehicle.SetHorizontalPosition(self, Vehicle.GetHorizontalPosition(self) + Vehicle.GetCurrentSpeed(self))
     
     def OutputCurrentPosition(self):
